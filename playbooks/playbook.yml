@@ -5,14 +5,3 @@
   hosts: all
   tasks:
     - copy: src="master.gitconfig" dest="~/.gitconfig"
-
-# ansible -m homebrew -a "name=bat state=latest" ubuntu
-
-- name: Ensure homebrew packages are installed
-  become: yes
-  hosts: ubuntu
-  tasks:
-    - apt: name=bat state=latest
-    - apt:
-        name: jq
-        state: latest

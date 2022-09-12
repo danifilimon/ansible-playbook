@@ -2,7 +2,7 @@
 # ansible -m copy -a "src=master.gitconfig dest=~/.gitconfig" ubuntu
 
 - name: Ensure ~/.gitconfig copied from master.gitconfig
-  hosts: ubuntu
+  hosts: all
   tasks:
     - copy: src="master.gitconfig" dest="~/.gitconfig"
 
